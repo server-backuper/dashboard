@@ -1,0 +1,2 @@
+# dashboard
+Server Backuper dashboard
