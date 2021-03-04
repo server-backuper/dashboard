@@ -20,6 +20,8 @@
     if (params.get('access_token')) {
       document.cookie =
         `token=${params.get('access_token')}; path=/; max-age=${params.get('expires_in')}`;
+      // Let's get rid of all the fuss in URL
+      location.hash = '';
       location.pathname = '/';
     } else {
       location.href =
