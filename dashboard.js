@@ -18,10 +18,11 @@ if (getCookie('token') == undefined) {
     return r.json();
   }).then(function (data) {
     console.log(data);
+    document.querySelector('#servers').style.width = `${data.length * 20}vw`;
     data.forEach(function (elem) {
       let e = document.createElement('img');
       e.src = elem.icon ? `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256` : 'https://cdn.discordapp.com/embed/avatars/0.png';
-      document.body.querySelector('#servers').appendChild(e);
+      document.querySelector('#servers').appendChild(e);
     });
   });
 }
