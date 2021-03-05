@@ -20,7 +20,7 @@ if (getCookie('token') == undefined) {
     console.log(data);
     data.forEach(function (elem) {
       let e = document.createElement('img');
-      e.src = `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256`;
+      e.src = elem.icon ? `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256` : 'https://cdn.discordapp.com/embed/avatars/0.png';
       document.body.querySelector('#servers').appendChild(e);
     });
   });
