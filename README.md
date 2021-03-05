@@ -1,2 +1,2 @@
-# dashboard
+# Dashboard
 Server Backuper dashboard
