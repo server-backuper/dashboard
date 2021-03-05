@@ -5,14 +5,18 @@ function getCookie(name) {
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
-fetch('https://discord.com/api/v8/users/@me/guilds', {
-  mode: 'cors',
-  headers: {
-    'Accept': 'application/json',
-    'Authorization': 'Bearer ' + getCookie('token')
-  }
-}).then(function (r) {
-  return r.json();
-}).then(function (data) {
-  console.log(data);
-});
+if (getCookie == undefined) {
+  location.pathname = '/authorize';
+} else {
+  fetch('https://api.server-backuper.ml/servers', {
+    mode: 'cors',
+    headers: {
+      'Accept': 'application/json',
+      'Authorization': `Bearer ${getCookie('token')}`
+    }
+  }).then(function (r) {
+    return r.json();
+  }).then(function (data) {
+    console.log(data);
+  });
+}
