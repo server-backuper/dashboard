@@ -1,8 +1,5 @@
-#servers {
-  display: inline-block;
-}
-
 img {
   display: inline-block;
   height: 20vh;
+  padding: 1vh;
 }
