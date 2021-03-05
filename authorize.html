@@ -20,7 +20,8 @@
     if (params.get('access_token')) {
       document.cookie =
         `token=${params.get('access_token')}; path=/; max-age=${params.get('expires_in')}`;
-      location.href = location.protocol + location.host;
+      location.hash = '';
+      location.pathname = '/';
     } else {
       location.href =
         'https://discord.com/api/oauth2/authorize?client_id=797792817983389726&redirect_uri=http%3A%2F%2Fdashboard.server-backuper.ml%2Fauthorize&response_type=token&scope=identify%20guilds';
