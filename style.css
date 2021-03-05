@@ -1,3 +1,7 @@
+#servers {
+  width: fit-content;
+}
+
 img {
   display: inline-block;
   height: 20vh;
