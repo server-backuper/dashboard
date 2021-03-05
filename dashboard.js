@@ -5,7 +5,7 @@ function getCookie(name) {
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
-if (getCookie == undefined) {
+if (getCookie('token') == undefined) {
   location.pathname = '/authorize';
 } else {
   fetch('https://api.server-backuper.ml/servers', {
