@@ -1,5 +1,6 @@
 img {
   display: inline-block;
   height: 20vh;
-  padding: 1vh;
+  padding: 2vh;
+  border: 2vh solid #f55252;
 }
