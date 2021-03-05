@@ -18,5 +18,10 @@ if (getCookie('token') == undefined) {
     return r.json();
   }).then(function (data) {
     console.log(data);
+    data.forEach(function (elem) {
+      let e = document.createElement('img');
+      e.src = `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256`;
+      document.body.appendChild(e);
+    });
   });
 }
