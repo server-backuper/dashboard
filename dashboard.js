@@ -21,7 +21,7 @@ if (getCookie('token') == undefined) {
     data.forEach(function (elem) {
       let e = document.createElement('img');
       e.src = `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256`;
-      document.body.appendChild(e);
+      document.body.querySelector('#servers').appendChild(e);
     });
   });
 }
