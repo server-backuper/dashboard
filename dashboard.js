@@ -6,7 +6,9 @@ function getCookie(name) {
   ));
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
-
+window.onprogress = (e) => {
+  console.log(e.total);
+}
 if (getCookie('token') == undefined) {
   location.pathname = '/authorize';
 } else {
@@ -34,14 +36,6 @@ if (getCookie('token') == undefined) {
       link.textContent = 'Go to Dashboard';
       link.classList.add('header');
       link.classList.add('very-small-header');
-      window.onprogress = 
-      /**
-       * 
-       * @param {ProgressEvent} e 
-       */
-      (e) => {
-        console.log(e.total);
-      }
       // e.src = elem.icon ? `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256` : 'https://cdn.discordapp.com/embed/avatars/0.png';
       document.body.querySelector('div#servers').appendChild(name);
       document.body.querySelector('div#servers').appendChild(link);
