@@ -46,3 +46,42 @@ body {
   background: none;
   border-radius: 0.25vmin;
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#pizza {
+  z-index: 99999999;
+  transform-origin: center;
+  margin: auto;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  height: 15vmin;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+#load {
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #1a1034;
+  z-index: 999999;
+}
