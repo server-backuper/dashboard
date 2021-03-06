@@ -6,9 +6,7 @@ function getCookie(name) {
   ));
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
-window.onprogress = (e) => {
-  console.log(e.total);
-}
+
 if (getCookie('token') == undefined) {
   location.pathname = '/authorize';
 } else {
