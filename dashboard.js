@@ -38,6 +38,7 @@ if (getCookie('token') == undefined) {
       document.body.querySelector('div#servers').appendChild(name);
       document.body.querySelector('div#servers').appendChild(link);
       document.body.querySelector('div#servers').appendChild(separator);
+      document.body.querySelector('div#servers').appendChild(separator);
     });
   });
 }
