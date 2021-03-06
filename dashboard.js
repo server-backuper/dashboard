@@ -24,9 +24,18 @@ if (getCookie('token') == undefined) {
       return e.owner;
     });
     newData.forEach(function (elem) {
-      let e = document.createElement('img');
-      e.src = elem.icon ? `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256` : 'https://cdn.discordapp.com/embed/avatars/0.png';
-      document.querySelector('#servers').appendChild(e);
+      let name = document.createElement('h1');
+      let link = document.createElement('a');
+      let separator = document.createElement('div');
+      separator.classList.add('separator');
+      name.classList.add('small-header');
+      name.classList.add('header');
+      name.textContent = elem.name;
+      link.textContent = 'Go to Dashboard';
+      link.classList.add('header');
+      link.classList.add('very-small-header');
+      // e.src = elem.icon ? `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256` : 'https://cdn.discordapp.com/embed/avatars/0.png';
+      document.body.querySelector('div#servers').appendChild(name);
     });
   });
 }
