@@ -40,5 +40,7 @@ if (getCookie('token') == undefined) {
       document.body.querySelector('div#servers').appendChild(separator);
       document.body.querySelector('div#servers').appendChild(separator);
     });
+    document.querySelector('img#pizza').remove();
+    document.querySelector('div#load').remove();
   });
 }
