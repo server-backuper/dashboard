@@ -36,6 +36,8 @@ if (getCookie('token') == undefined) {
       link.classList.add('very-small-header');
       // e.src = elem.icon ? `https://cdn.discordapp.com/icons/${elem.id}/${elem.icon}.png?size=256` : 'https://cdn.discordapp.com/embed/avatars/0.png';
       document.body.querySelector('div#servers').appendChild(name);
+      document.body.querySelector('div#servers').appendChild(link);
+      document.body.querySelector('div#servers').appendChild(separator);
     });
   });
 }
