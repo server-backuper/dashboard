@@ -10,7 +10,7 @@ function getCookie(name) {
 if (getCookie('token') == undefined) {
   location.pathname = '/authorize';
 } else {
-  fetch('https://api.server-backuper.ml/servers', {
+  fetch('https://api.server-backuper.cloud/servers', {
     mode: 'cors',
     headers: {
       'Accept': 'application/json',
